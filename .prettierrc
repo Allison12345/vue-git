@@ -1,0 +1,16 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "parser": "babel",
+  "overrides": [
+    {
+      "files": "*.less",
+      "options": { "parser": "less" }
+    },
+    {
+      "files": "*.vue",
+      "options": { "parser": "vue" }
+    }
+  ]
+}

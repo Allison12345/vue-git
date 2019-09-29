@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.full-w {
+  width: 100%;
+}
+.full-h {
+  height: 100%;
+}
+.full {
+  .full-w;
+  .full-h;
+}
+
+html,
+body {
+  .full;
+  font-size: 14px;
+}
