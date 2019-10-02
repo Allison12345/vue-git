@@ -3,12 +3,20 @@ import User from './user'
 
 const trendingChildren = [
   {
-    path: '/repo',
+    path: 'repo',
     component: Repo
   },
   {
-    path: '/user',
+    path: 'user',
     component: User
+  },
+  {
+    path: '/home/trending',
+    redirect: '/home/trending/repo'
+  },
+  {
+    path: '/home/trending/*',
+    redirect: '/home/trending/repo'
   }
 ]
 

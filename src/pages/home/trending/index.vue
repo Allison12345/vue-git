@@ -1,7 +1,7 @@
 <template lang="pug">
-  .full
-    router-view
+  .full.trending
     nav-bar(:items='navItems' :activeIndex='navActiveIndex' @active='onNavActive')
+    router-view
 </template>
 
 <script>
@@ -10,8 +10,8 @@ export default {
   data() {
     return {
       navItems: [
-        { label: 'REPO', path: '/home/trending/repo' },
-        { label: 'USER', path: '/home/trending/user' }
+        { label: '仓库', path: '/home/trending/repo' },
+        { label: '用户', path: '/home/trending/user' }
       ],
       navActiveIndex: 0
     }
@@ -24,3 +24,9 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+.trending {
+  padding-top: 42px;
+}
+</style>

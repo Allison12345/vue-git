@@ -1,7 +1,7 @@
 <template lang="pug">
   .nav-bar.flex.bg-white
     nav-bar-item(v-for='(item,index) in items' :key='index' 
-    v-bind='items' :isActive='index===activeIndex' @click='onActive(index)')
+    v-bind='item' :isActive='index===activeIndex' @click='onActive(index)')
 </template>
 
 <script>

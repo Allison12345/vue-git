@@ -1,5 +1,5 @@
 <template lang="pug">
-  page
+  page.home
     router-view
     tab-bar(:items='tabItems' :activeIndex='tabActiveIndex' @active='onTabActive')
 </template>
@@ -25,3 +25,9 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+.home {
+  padding-bottom: 42px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .user-item.full user
+  .user-item user
 </template>
 
 <script>
