@@ -1,5 +1,5 @@
 <template lang="pug">
-  .full repo
+  repo-item
 </template>
 
 <script>
