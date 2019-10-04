@@ -13,5 +13,6 @@ export default {
 .author-photo {
   width: 50px;
   height: 50px;
+  background-size: cover;
 }
 </style>

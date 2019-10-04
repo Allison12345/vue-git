@@ -6,6 +6,8 @@ import UserItem from './user-item'
 import CodeLang from './code-lang'
 import AuthorPhoto from './author-photo'
 import ActivityItem from './activity-item'
+import Cell from './cell'
+import Cells from './cells'
 import Page from './page'
 
 const components = [
@@ -17,7 +19,9 @@ const components = [
   UserItem,
   AuthorPhoto,
   CodeLang,
-  ActivityItem
+  ActivityItem,
+  Cell,
+  Cells
 ]
 
 const install = Vue => {

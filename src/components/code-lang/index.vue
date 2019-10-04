@@ -1,6 +1,6 @@
 <template lang="pug">
   span.code-lang
-    icon(name='radio-button-on-outline' :style='cptStyle')
+    icon(name='radio-button-on' :style='cptStyle')
     span {{code}}
 </template>
 
@@ -11,7 +11,7 @@ export default {
   computed: {
     cptStyle() {
       return {
-        backgroundColor: this.color
+        color: this.color
       }
     }
   }
