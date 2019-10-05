@@ -1,5 +1,8 @@
 <template lang="pug">
   .me
+    author-photo(:img='info.img')
+    .txt-center {{info.name}}
+    .txt-center {{info.additionalName}}
     cells
       .txt-center {{info.desc}}
       .flex.txt-center
@@ -22,7 +25,10 @@ export default {
         follwers: '435',
         follwing: '21',
         email: 'abc@xyz.com',
-        blog: 'https://alison.github.io'
+        blog: 'https://alison.github.io',
+        img: require('@/assets/imgs/allison.png'),
+        name: 'allison',
+        additionalName: 'allison12345'
       },
       infoItems: [
         { label: '仓库', key: 'repos' },
@@ -53,3 +59,11 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+.me {
+  .author-photo {
+    margin: 0 auto;
+  }
+}
+</style>

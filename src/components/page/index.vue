@@ -1,5 +1,5 @@
 <template lang="pug">
-  .bg.full
+  .page.bg.full
     slot
 </template>
 
@@ -8,3 +8,9 @@ export default {
   name: 'page'
 }
 </script>
+
+<style lang="less">
+.page {
+  overflow-y: scroll;
+}
+</style>
