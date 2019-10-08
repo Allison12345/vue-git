@@ -12,7 +12,10 @@ export default {
         img: require('@/assets/imgs/allison.png'),
         author: 'Allison',
         name: 'vue-git',
-        desc: 'rfsdfgdfgsdfgd'
+        desc:
+          Math.random() > 0.5
+            ? 'skjdhflkjdbfs'
+            : 'sikjhefilawuehfkmjdbfksdjfns,djnfksjdbfk'
       }))
     }
   }
