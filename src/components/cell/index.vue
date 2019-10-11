@@ -1,7 +1,7 @@
 <template lang="pug">
   .cell.flex
     .cell-bd.flex-1  {{label}}
-    .cell-ft(v-html='ft')
+    .cell-ft.flex-r-lc(v-html='ft')
       slot
 </template>
 

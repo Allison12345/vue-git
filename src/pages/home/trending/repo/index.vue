@@ -1,6 +1,6 @@
 <template lang="pug">
   .repo
-    repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(index)')
+    repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
 </template>
 
 <script>
@@ -21,9 +21,12 @@ export default {
     }
   },
   methods: {
-    onClick(index) {
-      console.log(index)
-      this.$router.push('/repo-info')
+    onClick(item) {
+      const author = item.author,
+        name = item.name,
+        desc = item.desc
+      console.log(author, name, desc)
+      this.$router.push({ path: '/repo-info', query: { author, name, desc } })
     }
   }
 }
