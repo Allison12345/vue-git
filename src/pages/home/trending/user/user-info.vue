@@ -1,9 +1,13 @@
 <template lang="pug">
   .user-info.bg.full
-    cells.flex.flex-1.txt-center
-      me-info-item(v-for='({label,key},index) in infoItems ' :key='key' :value='info[key]' :label='label' 
-        :class='{"item-border-lt":index}')
-      div follow share
+    author-photo(:img='info.img')
+    .txt-center {{$route.query.name}}
+    .txt-center @{{$route.query.author}}
+    cells.txt-center
+      div.flex
+        me-info-item(v-for='({label,key},index) in infoItems ' :key='key' :value='info[key]' :label='label' 
+          :class='{"item-border-lt":index}')
+      div Follow Share
     cells(v-for='(item,i) in userItems' :key='i')
       cell(v-for='({label,key,ft},j) in item' :key='j' :label='label' :ft='key?(info[key]||"--"):ft')
 </template>
@@ -20,7 +24,8 @@ export default {
         email: 'abc@xyz.com',
         blog: 'https://alison.github.io',
         company: 'ieurjf',
-        loaction: 'shenzheng'
+        loaction: 'shenzheng',
+        img: require('@/assets/imgs/allison.png')
       },
       infoItems: [
         { label: '仓库', key: 'repos' },
@@ -46,3 +51,10 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.user-info {
+  .author-photo {
+    margin: 0 auto;
+  }
+}
+</style>

@@ -11,6 +11,7 @@ import Cells from './cells'
 import Page from './page'
 import InfoItem from './info-item'
 import MeInfoItem from './me-info-item'
+import ViewCodeItem from './view-code-item'
 
 const components = [
   Icon,
@@ -25,7 +26,8 @@ const components = [
   Cell,
   Cells,
   InfoItem,
-  MeInfoItem
+  MeInfoItem,
+  ViewCodeItem
 ]
 
 const install = Vue => {

@@ -1,5 +1,6 @@
 <template lang="pug">
   .cell.flex
+    icon.flex-r-lc(v-if='name' :name='name')
     .cell-bd.flex-1  {{label}}
     .cell-ft.flex-r-lc(v-html='ft')
       slot
@@ -8,7 +9,7 @@
 <script>
 export default {
   name: 'cell',
-  props: ['label', 'ft']
+  props: ['name', 'label', 'ft']
 }
 </script>
 
