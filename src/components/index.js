@@ -9,6 +9,8 @@ import ActivityItem from './activity-item'
 import Cell from './cell'
 import Cells from './cells'
 import Page from './page'
+import InfoItem from './info-item'
+import MeInfoItem from './me-info-item'
 
 const components = [
   Icon,
@@ -21,7 +23,9 @@ const components = [
   CodeLang,
   ActivityItem,
   Cell,
-  Cells
+  Cells,
+  InfoItem,
+  MeInfoItem
 ]
 
 const install = Vue => {

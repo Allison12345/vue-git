@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import MeInfoItem from './me-info-item'
 const ft = '<i class="eva eva-chevron-right-outline" />'
 export default {
   name: 'me',
@@ -33,7 +32,7 @@ export default {
       infoItems: [
         { label: '仓库', key: 'repos' },
         { label: '粉丝', key: 'follwers' },
-        { label: '粉丝', key: 'follwing' }
+        { label: '关注', key: 'follwing' }
       ],
       items: [
         [{ label: '关注 vue-git ♥️' }],
@@ -53,9 +52,6 @@ export default {
         [{ label: '反馈', ft }, { label: '关于', ft }]
       ]
     }
-  },
-  components: {
-    MeInfoItem
   }
 }
 </script>

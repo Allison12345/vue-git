@@ -10,10 +10,11 @@
       cell(v-for='({label,key,ft},j) in rows' :key='j' :label='label'
        :ft='key?`${info[key]}${ft}`:ft')
     cells README.md
+      br
+      br
 </template>
 
 <script>
-import InfoItem from './info-item'
 const ft = '<i class="eva eva-chevron-right-outline" />'
 export default {
   name: 'repo-info',
@@ -75,13 +76,6 @@ export default {
         ]
       ]
     }
-  },
-  components: {
-    InfoItem
   }
 }
 </script>
-<style lang="less">
-.repo-info {
-}
-</style>
