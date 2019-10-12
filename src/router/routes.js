@@ -7,6 +7,9 @@ import UserInfo from '@/pages/home/trending/user/user-info'
 
 import ViewCode from '@/pages/view-code'
 
+import Issues from '@/pages/issues'
+import issuesChildren from '@/pages/issues/routes'
+
 import Home from '@/pages/home'
 import homeChildren from '@/pages/home/routes'
 
@@ -15,6 +18,11 @@ const routes = [
     path: '/home',
     component: Home,
     children: homeChildren
+  },
+  {
+    path: '/issues',
+    component: Issues,
+    children: issuesChildren
   },
   {
     path: '/repo-info',

@@ -17,3 +17,14 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.view-code-item {
+  .cells {
+    .cell {
+      .cell-bd {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+</style>

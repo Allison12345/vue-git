@@ -12,6 +12,7 @@ import Page from './page'
 import InfoItem from './info-item'
 import MeInfoItem from './me-info-item'
 import ViewCodeItem from './view-code-item'
+import IssuesItem from './issues-item'
 
 const components = [
   Icon,
@@ -27,7 +28,8 @@ const components = [
   Cells,
   InfoItem,
   MeInfoItem,
-  ViewCodeItem
+  ViewCodeItem,
+  IssuesItem
 ]
 
 const install = Vue => {
