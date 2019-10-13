@@ -1,5 +1,5 @@
 <template lang="pug">
-  .user
+  scroller-y
     user-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
 </template>
 
@@ -12,10 +12,10 @@ export default {
         img: require('@/assets/imgs/allison.png'),
         author: 'Allison',
         name: 'vue-git',
-        desc:
-          Math.random() > 0.5
-            ? 'skjdhflkjdbfs'
-            : 'sikjhefilawuehfkmjdbfksdjfns,djnfksjdbfk'
+        desc: new Array(Math.random() > 0.5 ? 5 : 30)
+          .fill(0)
+          .map(() => 'a')
+          .join(' ')
       }))
     }
   },

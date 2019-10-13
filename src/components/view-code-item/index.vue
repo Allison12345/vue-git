@@ -1,7 +1,6 @@
 <template lang="pug">
-  .view-code-item
-    cells
-      cell(:name='name' :label='label' :ft='ft')
+  .view-code-item.bg-white
+    cell(:name='name' :label='label' :ft='ft')
 </template>
 
 <script>
@@ -13,8 +12,6 @@ export default {
 
 <style lang="less">
 .view-code-item {
-  .cells {
-    margin: 10px 10px;
-  }
+  margin: 10px;
 }
 </style>

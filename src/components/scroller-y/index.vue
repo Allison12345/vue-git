@@ -1,9 +1,10 @@
 <template lang="pug">
-  .closed
+  .full-h.scroll-y.hidden-x
+    slot
 </template>
 
 <script>
 export default {
-  name: 'closed'
+  name: 'scroller-y'
 }
 </script>

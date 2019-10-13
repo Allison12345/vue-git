@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="less">
-.nav-bar {
+.nav-item {
   color: #333333;
   padding: 10px;
   &.active {

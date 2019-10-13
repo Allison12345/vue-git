@@ -1,5 +1,5 @@
 <template lang="pug">
-  .repo
+  scroller-y
     repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
 </template>
 

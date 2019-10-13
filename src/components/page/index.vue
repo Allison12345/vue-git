@@ -8,9 +8,3 @@ export default {
   name: 'page'
 }
 </script>
-
-<style lang="less">
-.page {
-  overflow-y: scroll;
-}
-</style>

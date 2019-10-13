@@ -1,7 +1,8 @@
 <template lang="pug">
-  .view-code.bg
-    view-code-item(v-for='({name,label,ft},i) in ViewCodeItems' :key='i'
-     :name='name' :label='label' :ft='ft')
+  page.view-code
+    scroller-y
+      view-code-item(v-for='({name,label,ft},i) in ViewCodeItems' :key='i'
+        :name='name' :label='label' :ft='ft')
 </template>
 
 <script>
@@ -17,14 +18,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-.view-code-item {
-  .cells {
-    .cell {
-      .cell-bd {
-        margin-left: 5px;
-      }
-    }
-  }
-}
-</style>

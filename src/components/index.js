@@ -13,6 +13,7 @@ import InfoItem from './info-item'
 import MeInfoItem from './me-info-item'
 import ViewCodeItem from './view-code-item'
 import IssuesItem from './issues-item'
+import ScrollerY from './scroller-y'
 
 const components = [
   Icon,
@@ -29,7 +30,8 @@ const components = [
   InfoItem,
   MeInfoItem,
   ViewCodeItem,
-  IssuesItem
+  IssuesItem,
+  ScrollerY
 ]
 
 const install = Vue => {
