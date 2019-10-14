@@ -6,6 +6,7 @@ import UserItem from './user-item'
 import CodeLang from './code-lang'
 import AuthorPhoto from './author-photo'
 import ActivityItem from './activity-item'
+import ContributorItem from './contributor-item'
 import Cell from './cell'
 import Cells from './cells'
 import Page from './page'
@@ -31,7 +32,8 @@ const components = [
   MeInfoItem,
   ViewCodeItem,
   IssuesItem,
-  ScrollerY
+  ScrollerY,
+  ContributorItem
 ]
 
 const install = Vue => {

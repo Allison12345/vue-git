@@ -3,14 +3,17 @@
     .activity-item__hd
       author-photo(:img='img')
     .activity-item__bd.flex-c-sb
-      .activity-item__bd-top {{user}} {{activity}} {{repo}}
+      .activity-item__bd-top(v-if='repo') {{user}} {{activity}} {{repo}}
+      .activity-item__bd-top(v-if='author')
+        div {{user}} {{activity}}
+        div {{author}}/{{name}}
       .activity-item__bd-dowm {{date}}
 </template>
 
 <script>
 export default {
   name: 'activity-item',
-  props: ['img', 'user', 'activity', 'repo', 'date']
+  props: ['img', 'user', 'activity', 'repo', 'author', 'name', 'date']
 }
 </script>
 

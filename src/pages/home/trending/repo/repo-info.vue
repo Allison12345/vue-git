@@ -7,8 +7,8 @@
         info-item.flex-1(v-for='({icon,key,name},j) in row' :key='j' 
           :icon='icon' :label='key?info[key]:name')
     cells(v-for='(rows,i) in items' :key='i' )
-      cell(v-for='({label,key,ft},j) in rows' :key='j' :label='label'
-       :ft='key?`${info[key]}${ft}`:ft')
+      cell(v-for='({label,key,ft,path},j) in rows' :key='j' :label='label'
+       :ft='key?`${info[key]}${ft}`:ft' :path='path' @click.native='onClick(path)')
     cells README.md
       br
       br
@@ -46,10 +46,12 @@ export default {
             label: '作者',
             key: 'author',
             ft
+            //path: '/user-info'
           },
           {
             label: '视图代码',
-            ft
+            ft,
+            path: '/view-code'
           },
           {
             label: '分支',
@@ -63,18 +65,26 @@ export default {
         [
           {
             label: '问题',
-            ft
+            ft,
+            path: '/issues'
           },
           {
             label: '事件',
-            ft
+            ft,
+            path: '/events'
           },
           {
             label: '贡献者',
-            ft
+            ft,
+            path: '/contributors'
           }
         ]
       ]
+    }
+  },
+  methods: {
+    onClick(path) {
+      this.$router.replace(path)
     }
   }
 }

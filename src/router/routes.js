@@ -9,6 +9,10 @@ import ViewCode from '@/pages/view-code'
 
 import Issues from '@/pages/issues'
 
+import Events from '@/pages/events'
+
+import Contributors from '@/pages/contributors'
+
 import Home from '@/pages/home'
 import homeChildren from '@/pages/home/routes'
 
@@ -19,8 +23,16 @@ const routes = [
     children: homeChildren
   },
   {
+    path: '/events',
+    component: Events
+  },
+  {
     path: '/issues',
     component: Issues
+  },
+  {
+    path: '/contributors',
+    component: Contributors
   },
   {
     path: '/repo-info',
