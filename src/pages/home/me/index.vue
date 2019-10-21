@@ -9,7 +9,8 @@
         me-info-item(v-for='({label,key},index) in infoItems' :key='key' 
           :class='{"item-border-lt":index}' :value='info[key]' :label='label')
     cells(v-for='(rows,i) in items' :key='i')
-      cell(v-for='({label,key,ft},j) in rows' :key='j' :label='label' :ft='key?(info[key]||"--"):ft')
+      cell(v-for='({label,key,ft,path},j) in rows' :key='j' :label='label' 
+      :path='path' :ft='key?(info[key]||"--"):ft' @click.native='onClick(path)')
 </template>
 
 <script>
@@ -49,8 +50,14 @@ export default {
           { label: '公司', key: 'company' },
           { label: '所在地', key: 'location' }
         ],
-        [{ label: '反馈', ft }, { label: '关于', ft }]
+        [{ label: '反馈', ft }, { label: '关于', ft, path: '/about' }]
       ]
+    }
+  },
+  methods: {
+    onClick(path) {
+      console.log(path)
+      this.$router.replace(path)
     }
   }
 }
