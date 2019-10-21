@@ -11,6 +11,8 @@ import Issues from '@/pages/issues'
 
 import Events from '@/pages/events'
 
+import About from '@/pages/about'
+
 import Contributors from '@/pages/contributors'
 
 import Home from '@/pages/home'
@@ -21,6 +23,10 @@ const routes = [
     path: '/home',
     component: Home,
     children: homeChildren
+  },
+  {
+    path: '/about',
+    component: About
   },
   {
     path: '/events',

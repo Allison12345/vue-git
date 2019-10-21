@@ -15,7 +15,7 @@ export default {
   margin: 0 10px 10px;
   padding: 10px 0;
   .contributor-item__hd {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 }
 </style>

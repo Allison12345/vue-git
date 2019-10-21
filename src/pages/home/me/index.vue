@@ -41,7 +41,7 @@ export default {
             label: '已关注',
             ft
           },
-          { label: '问题', ft }
+          { label: '问题', ft, path: '/issues' }
         ],
         [
           { label: '邮箱', key: 'email' },
