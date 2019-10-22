@@ -1,5 +1,5 @@
 <template lang="pug">
-  .nav-item.flex-1.txt-center(href='javascript:;' @click='onClick' :class='{active:isActive}')
+  .nav-item.txt-center(href='javascript:;' @click='onClick' :class='{active:isActive}')
     p.nav-item-label {{label}}
 </template>
 
@@ -20,6 +20,9 @@ export default {
 .nav-item {
   color: #333333;
   padding: 10px;
+  .nav-item-label {
+    width: 100px;
+  }
   &.active {
     color: rgb(121, 119, 253);
   }

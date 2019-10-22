@@ -1,6 +1,8 @@
 <template lang="pug">
   scroller-y
     repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
+    .ft
+      button(@click='onShown') Month & JavaScript
 </template>
 
 <script>
@@ -31,3 +33,20 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.ft {
+  position: fixed;
+  background-color: blue;
+  border-radius: 40px;
+  margin-top: 20px;
+  bottom: 80px;
+  left: 80px;
+  right: 80px;
+  opacity: 50%;
+  text-align: center;
+  button {
+    color: white;
+    padding: 5px 15px;
+  }
+}
+</style>

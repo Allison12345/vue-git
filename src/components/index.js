@@ -1,4 +1,5 @@
 import Icon from './icon'
+import Mask from './mask'
 import NavBar from './nav-bar'
 import TabBar from './tab-bar'
 import RepoItem from './repo-item'
@@ -18,6 +19,7 @@ import ScrollerY from './scroller-y'
 
 const components = [
   Icon,
+  Mask,
   TabBar,
   Page,
   NavBar,
