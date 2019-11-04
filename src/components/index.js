@@ -1,8 +1,9 @@
 import Icon from './icon'
-import Mask from './mask'
+import MaskPage from './mask-page'
 import NavBar from './nav-bar'
 import TabBar from './tab-bar'
 import RepoItem from './repo-item'
+import Picker from './picker'
 import UserItem from './user-item'
 import CodeLang from './code-lang'
 import AuthorPhoto from './author-photo'
@@ -19,7 +20,7 @@ import ScrollerY from './scroller-y'
 
 const components = [
   Icon,
-  Mask,
+  MaskPage,
   TabBar,
   Page,
   NavBar,
@@ -35,7 +36,8 @@ const components = [
   ViewCodeItem,
   IssuesItem,
   ScrollerY,
-  ContributorItem
+  ContributorItem,
+  Picker
 ]
 
 const install = Vue => {

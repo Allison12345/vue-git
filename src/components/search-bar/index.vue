@@ -1,10 +1,9 @@
 <template lang="pug">
-  page
-    .search.bg-white
-      
+  .search-bar
+    button() Search What you want
 </template>
 <script>
 export default {
-  name: 'search'
+  name: 'search-bar'
 }
 </script>

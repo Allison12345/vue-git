@@ -15,8 +15,6 @@ import About from '@/pages/about'
 
 import Contributors from '@/pages/contributors'
 
-import Pick from '@/pages/pick'
-
 import Home from '@/pages/home'
 import homeChildren from '@/pages/home/routes'
 
@@ -29,10 +27,6 @@ const routes = [
   {
     path: '/about',
     component: About
-  },
-  {
-    path: '/pick',
-    component: Pick
   },
   {
     path: '/events',
