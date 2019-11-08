@@ -4,7 +4,7 @@ page
     repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
     .ft
       .picker-button(@click='isShown = !isShown') Month & JavaScript
-  picker(v-if='isShown' @cancel='isShown = false' @comfrim='isShown = false'
+  picker(v-if='isShown' @cancel='isShown = false' :selectedIndex='mulSelIndex' @comfrim='isShown = false'
   :pickItems='pickItems')
 </template>
 
@@ -24,6 +24,7 @@ export default {
         todayStars: '48'
       })),
       isShown: false,
+      mulSelIndex: [3, 3],
       pickItems: [
         ['Today', 'Week', 'Month', 'a', 'g'],
         ['All', 'HTML', 'Javascript', 'h', 'h']

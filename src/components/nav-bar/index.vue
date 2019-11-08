@@ -1,6 +1,6 @@
 <template lang="pug">
   .nav-bar.flex-1.flex-r-lc.bg-white
-    icon(name='options-2-outline')
+    icon(name='options-2-outline' @click='onLag()')
     nav-bar-item(v-for='(item,index) in items' :key='index' 
     v-bind='item' :isActive='index===activeIndex' @click='onActive(index)')
     icon(name='search-outline')
@@ -14,6 +14,10 @@ export default {
   methods: {
     onActive(index) {
       this.$emit('active', index)
+    },
+    onLag() {
+      console.log('icon')
+      this.$router.replace('/languages')
     }
   },
   components: {
@@ -31,6 +35,7 @@ export default {
   .eva-options-2-outline {
     width: 50px;
     text-align: center;
+    padding: 5px;
   }
   .eva-search-outline {
     width: 50px;

@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   mask-page.animate-fade-in
-  .picker.bg-white.flex-c-tc.animate-slide-up
+  .picker.bg-white.animate-slide-up
     .picker__hd
       a.picker-action__hd(@click='cancel')  取消
       a.picker-action__bd(@click='comfrim') 确定
@@ -19,7 +19,7 @@ import Wheel from '@better-scroll/wheel'
 BScroll.use(Wheel)
 export default {
   name: 'picker',
-  props: ['pickItems'],
+  props: ['pickItems', 'selectedIndex'],
   mounted() {
     this.initScroll()
   },
@@ -66,16 +66,32 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
+  height: 150px;
   max-height: 75%;
   line-height: 1.4;
   background-color: #ffffff;
   overflow: hidden;
-  padding: 0 calc(24px + constant(safe-area-inset-right))
-    constant(safe-area-inset-bottom) calc(24px + constant(safe-area-inset-left));
-  padding: 0 calc(24px + env(safe-area-inset-right)) env(safe-area-inset-bottom)
-    calc(24px + env(safe-area-inset-left));
-  .picker-action__hd {
-    margin: 4px 15px 40px;
+  .picker__hd {
+    display: flex;
+    position: relative;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .picker__bd {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    height: 240px;
+    overflow: hidden;
+    .picker__group {
+      overflow: hidden;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      position: relative;
+      height: 100%;
+    }
   }
 }
 </style>

@@ -15,6 +15,8 @@ import About from '@/pages/about'
 
 import Contributors from '@/pages/contributors'
 
+import Languages from '@/pages/languages'
+
 import Home from '@/pages/home'
 import homeChildren from '@/pages/home/routes'
 
@@ -23,6 +25,10 @@ const routes = [
     path: '/home',
     component: Home,
     children: homeChildren
+  },
+  {
+    path: '/languages',
+    component: Languages
   },
   {
     path: '/about',
