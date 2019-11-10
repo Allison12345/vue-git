@@ -45,8 +45,8 @@ export default {
           {
             label: '作者',
             key: 'author',
-            ft
-            //path: '/user-info'
+            ft,
+            path: '/user-info'
           },
           {
             label: '视图代码',
@@ -84,7 +84,7 @@ export default {
   },
   methods: {
     onClick(path) {
-      this.$router.replace(path)
+      this.$router.push(path)
     }
   }
 }

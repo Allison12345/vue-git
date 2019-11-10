@@ -1,11 +1,11 @@
 <template lang="pug">
 page
   scroller-y
-    repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native='onClick(item)')
+    repo-item(v-for='(item,index) in items' v-bind='item' :key='index' @click.native.prevent='onClick(item)')
     .ft
-      .picker-button(@click='isShown = !isShown') Month & JavaScript
-  picker(v-if='isShown' @cancel='isShown = false' :selectedIndex='mulSelIndex' @comfrim='isShown = false'
-  :pickItems='pickItems')
+      .picker-button(@click='isShown = !isShown') {{cptSelectedItems}}
+  picker(v-if='isShown' @cancel='isShown = false' :selectedIndex='mulSelIndex' @comfrim='onPickerConfirm'
+  :pickItems='pickItems' @change='onPickerChange')
 </template>
 
 <script>
@@ -24,11 +24,8 @@ export default {
         todayStars: '48'
       })),
       isShown: false,
-      mulSelIndex: [3, 3],
-      pickItems: [
-        ['Today', 'Week', 'Month', 'a', 'g'],
-        ['All', 'HTML', 'Javascript', 'h', 'h']
-      ]
+      mulSelIndex: [2, 2],
+      pickItems: [['Today', 'Week', 'Month'], ['All', 'HTML', 'Javascript']]
     }
   },
   methods: {
@@ -39,8 +36,19 @@ export default {
       console.log(author, name, desc)
       this.$router.push({ path: '/repo-info', query: { author, name, desc } })
     },
-    onShown() {
-      this.$router.push('picker')
+    onPickerConfirm(indexList) {
+      this.mulSelIndex = indexList
+      this.isShown = false
+    },
+    onPickerChange(groupIndex, itemIndex) {
+      console.log(groupIndex, itemIndex)
+    }
+  },
+  computed: {
+    cptSelectedItems() {
+      return this.pickItems
+        .map((item, index) => item[this.mulSelIndex[index]])
+        .join(' & ')
     }
   }
 }
@@ -48,13 +56,13 @@ export default {
 <style lang="less">
 .ft {
   position: fixed;
-  background-color: rgb(24, 24, 233);
+  background-color: rgb(53, 53, 199);
   border-radius: 40px;
   margin-top: 20px;
   bottom: 80px;
   left: 80px;
   right: 80px;
-  opacity: 50%;
+  opacity: 80%;
   text-align: center;
   .picker-button {
     color: white;

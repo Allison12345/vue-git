@@ -1,5 +1,5 @@
 <template lang="pug">
-  .repo-item.bg-white
+  .repo-item.bg-white.tap-highlight(href='javascript:;')
     .repo-item__hd
       icon(name='book-outline')
       span {{author}}/{{name}}

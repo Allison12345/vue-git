@@ -18,6 +18,7 @@ export default {
   },
   methods: {
     onNavActive(index) {
+      if (this.navActiveIndex === index) return
       this.navActiveIndex = index
       this.$router.replace(this.navItems[index].path)
     }

@@ -1,0 +1,112 @@
+.picker {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 75%;
+  line-height: 1.4;
+  background-color: #ffffff;
+  overflow: hidden;
+  .picker__hd {
+    display: flex;
+    position: relative;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.4;
+    padding: 6px 24px;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.1);
+      transform-origin: 0 100%;
+      transform: scaleY(0.5);
+    }
+  }
+  .picker__bd {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    height: 240px;
+    overflow: hidden;
+    .picker__group {
+      overflow: hidden;
+      flex: 1;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      .picker__content {
+        margin-top: 96px;
+        .picker__item {
+          height: 48px;
+          line-height: 48px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.9);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      .picker__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        z-index: 3;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.6)
+          ),
+          linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.6)
+          );
+        background-position: top, bottom;
+        background-size: 100% 92px;
+        background-repeat: no-repeat;
+        transform: translateZ(0);
+      }
+      .picker__indicator {
+        width: 100%;
+        height: 56px;
+        position: absolute;
+        left: 0;
+        top: 92px;
+        z-index: 3;
+        &:before {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          height: 1px;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          color: rgba(0, 0, 0, 0.1);
+          transform-origin: 0 0;
+          transform: scaleY(0.5);
+        }
+        &:after {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 1px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          color: rgba(0, 0, 0, 0.1);
+          transform-origin: 0 100%;
+          transform: scaleY(0.5);
+        }
+      }
+    }
+  }
+}
