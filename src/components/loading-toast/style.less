@@ -1,0 +1,40 @@
+.loading-toast {
+  z-index: 5000;
+  width: 120px;
+  height: 120px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  .loading {
+    margin: 8px 0;
+    width: 38px;
+    height: 38px;
+    vertical-align: baseline;
+    display: inline-block;
+    animation: weuiLoading 1s steps(12, end) infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(12);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: loading;
+    background-size: 100%;
+  }
+  .loading-content {
+    font-size: 14px;
+  }
+}

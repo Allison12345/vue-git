@@ -57,7 +57,7 @@ export default {
   methods: {
     onClick(path) {
       console.log(path)
-      this.$router.replace(path)
+      this.$router.push(path)
     }
   }
 }

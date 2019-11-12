@@ -1,5 +1,5 @@
 <template lang="pug">
-  .user-item.bg-white
+  .user-item.bg-white.tap-highlight
     .user-item__hd
       author-photo(:img='img')
     .user-item__bd.flex-c-sb

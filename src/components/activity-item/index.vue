@@ -1,5 +1,5 @@
 <template lang="pug">
-  .activity-item.flex-r-lc.bg-white
+  .activity-item.flex-r-lc.bg-white.tap-highlight
     .activity-item__hd
       author-photo(:img='img')
     .activity-item__bd.flex-c-sb

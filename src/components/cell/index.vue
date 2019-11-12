@@ -1,5 +1,5 @@
 <template lang="pug">
-  .cell.flex
+  .cell.flex.tap-highlight
     icon.flex-r-lc(v-if='name' :name='name')
     .cell-bd.flex-1  {{label}}
     .cell-ft.flex-r-lc(v-html='ft')

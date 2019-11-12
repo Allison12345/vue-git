@@ -6,6 +6,7 @@ page
       .picker-button(@click='isShown = !isShown') {{cptSelectedItems}}
   picker(v-if='isShown' @cancel='isShown = false' :selectedIndex='mulSelIndex' @comfrim='onPickerConfirm'
   :pickItems='pickItems' @change='onPickerChange')
+  successToast
 </template>
 
 <script>
@@ -24,7 +25,7 @@ export default {
         todayStars: '48'
       })),
       isShown: false,
-      mulSelIndex: [2, 2],
+      mulSelIndex: [1, 1],
       pickItems: [['Today', 'Week', 'Month'], ['All', 'HTML', 'Javascript']]
     }
   },

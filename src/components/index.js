@@ -1,4 +1,6 @@
 import Icon from './icon'
+import SuccessToast from './success-toast'
+import LoadingToast from './loading-toast'
 import MaskPage from './mask-page'
 import NavBar from './nav-bar'
 import TabBar from './tab-bar'
@@ -24,6 +26,8 @@ const components = [
   LanguagesCells,
   LanguagesCell,
   Icon,
+  LoadingToast,
+  SuccessToast,
   MaskPage,
   TabBar,
   Page,
