@@ -1,6 +1,6 @@
 <template lang="pug">
   .nav-bar.flex-1.flex-r-lc.bg-white
-    icon(name='options-2-outline' @click='onLag()')
+    icon(name='options-2-outline' @click.native='onLag')
     nav-bar-item(v-for='(item,index) in items' :key='index' 
     v-bind='item' :isActive='index===activeIndex' @click='onActive(index)')
     icon(name='search-outline')

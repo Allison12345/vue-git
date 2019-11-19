@@ -9,3 +9,16 @@ export default {
   props: ['item']
 }
 </script>
+<style lang="less">
+.languages-cells {
+  margin: 0;
+  padding: 0;
+  .languages-cells__hd {
+    margin: 0 4px;
+    padding: 6px 0;
+    background-color: #ededed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+</style>

@@ -6,7 +6,6 @@ page
       .picker-button(@click='isShown = !isShown') {{cptSelectedItems}}
   picker(v-if='isShown' @cancel='isShown = false' :selectedIndex='mulSelIndex' @comfrim='onPickerConfirm'
   :pickItems='pickItems' @change='onPickerChange')
-  successToast
 </template>
 
 <script>

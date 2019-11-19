@@ -1,6 +1,7 @@
 import Icon from './icon'
 import SuccessToast from './success-toast'
 import LoadingToast from './loading-toast'
+import WordToast from './word-toast'
 import MaskPage from './mask-page'
 import NavBar from './nav-bar'
 import TabBar from './tab-bar'
@@ -13,6 +14,8 @@ import ActivityItem from './activity-item'
 import ContributorItem from './contributor-item'
 import Cell from './cell'
 import Cells from './cells'
+import ClickCell from './click-cell'
+import WordCells from './word-cells'
 import Page from './page'
 import InfoItem from './info-item'
 import MeInfoItem from './me-info-item'
@@ -28,6 +31,7 @@ const components = [
   Icon,
   LoadingToast,
   SuccessToast,
+  WordToast,
   MaskPage,
   TabBar,
   Page,
@@ -39,6 +43,8 @@ const components = [
   ActivityItem,
   Cell,
   Cells,
+  ClickCell,
+  WordCells,
   InfoItem,
   MeInfoItem,
   ViewCodeItem,
