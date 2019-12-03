@@ -1,5 +1,6 @@
 <template lang="pug">
 page
+  languages-cells__top(:clickItems='clickItems' @deleteItem='onDeleteItem(index)')
   languages-cells(v-for='(i,index) in languagesItems ' :key='index' :item='i')
   word-cells(:wordItems='wordItems' @onActiveWord='onActiveWord')
   word-toast(:word='activeWord' v-if='isShown')
@@ -44,7 +45,8 @@ export default {
         ]
       ],
       activeWord: '',
-      isShown: false
+      isShown: false,
+      clickItems: ['ske', 'ksd', 'skd']
     }
   },
   methods: {
@@ -54,7 +56,8 @@ export default {
       setTimeout(() => {
         this.isShown = false
       }, 1500)
-    }
+    },
+    onDeleteItem() {}
   }
 }
 </script>

@@ -24,6 +24,7 @@ import IssuesItem from './issues-item'
 import ScrollerY from './scroller-y'
 import LanguagesCells from './languages-cells'
 import LanguagesCell from './languages-cell'
+import LanguagesCellsTop from './languages-cells__top'
 
 const components = [
   LanguagesCells,
@@ -51,7 +52,8 @@ const components = [
   IssuesItem,
   ScrollerY,
   ContributorItem,
-  Picker
+  Picker,
+  LanguagesCellsTop
 ]
 
 const install = Vue => {
