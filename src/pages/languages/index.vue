@@ -1,7 +1,8 @@
 <template lang="pug">
 page
-  languages-cells__top(:clickItems='clickItems' @deleteItem='onDeleteItem(index)')
-  languages-cells(v-for='(i,index) in languagesItems ' :key='index' :item='i')
+  languages-cells__top(:clickItems='clickItems' @deleteItem='onDeleteItem')
+  languages-cells(v-for='(i,key) in languagesItems ' :key='key' :item='i' :cellsIndex='key'
+  @choose='onChooseItems')
   word-cells(:wordItems='wordItems' @onActiveWord='onActiveWord')
   word-toast(:word='activeWord' v-if='isShown')
 </template>
@@ -46,7 +47,9 @@ export default {
       ],
       activeWord: '',
       isShown: false,
-      clickItems: ['ske', 'ksd', 'skd']
+      clickItems: [],
+      cellsIndex: '',
+      cellIndex: ''
     }
   },
   methods: {
@@ -57,7 +60,15 @@ export default {
         this.isShown = false
       }, 1500)
     },
-    onDeleteItem() {}
+    onChooseItems(cellsIndex, index) {
+      console.log(cellsIndex, index)
+      this.cellsIndex === cellsIndex
+      this.cellIndex === index
+      this.clickItems.push(this.languagesItems[cellsIndex].label[index])
+    },
+    onDeleteItem(index) {
+      this.clickItems.splice(index, 1)
+    }
   }
 }
 </script>

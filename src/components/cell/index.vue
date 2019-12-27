@@ -17,4 +17,7 @@ export default {
 .cell {
   padding: 8px 10px;
 }
+.cell:active {
+  background-color: #ededed;
+}
 </style>

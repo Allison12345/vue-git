@@ -1,7 +1,7 @@
 <template lang="pug">
   .languages-cells__top tips: Click to delete
     .languages-cells-content.flex
-      .languages-cells-item.flex(v-for='(item,index) in clickItems ' :key='index' 
+      div.languages-cells-item.flex(v-for='(item,index) in clickItems ' :key='index' 
     @click='onDeleteItem(index)') {{item}}
 </template>
 <script>
@@ -10,6 +10,7 @@ export default {
   props: ['clickItems'],
   methods: {
     onDeleteItem(index) {
+      console.log(index)
       this.$emit('deleteItem', index)
     }
   }

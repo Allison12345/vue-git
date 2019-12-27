@@ -1,10 +1,16 @@
 <template lang="pug">
-  .languages-cell.bg-white {{label}}
+  p.languages-cell.bg-white(@click='onClick') {{label}}
 </template>
 <script>
 export default {
   name: 'languages-cell',
-  props: ['label']
+  props: ['label'],
+  methods: {
+    onClick(e) {
+      e.preventDefault()
+      this.$emit('click', e)
+    }
+  }
 }
 </script>
 <style lang="less">
@@ -15,5 +21,8 @@ export default {
   margin: 0 4px;
   padding: 6px;
   font-size: 16px;
+}
+p:active {
+  background-color: #ededed;
 }
 </style>

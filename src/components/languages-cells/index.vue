@@ -1,12 +1,22 @@
 <template lang="pug">
   .languages-cells
     .languages-cells__hd {{item.word}}
-    languages-cell(v-for='i,index in item.label' :key='index' :label='i')
+    languages-cell(v-for='(i,index) in item.label' :key='index' 
+    :label='i' @click='onChoose(index)')
 </template>
 <script>
+import LanguagesCell from './languages-cell'
 export default {
   name: 'languages-cells',
-  props: ['item']
+  props: ['item', 'cellsIndex'],
+  methods: {
+    onChoose(index) {
+      this.$emit('choose', this.cellsIndex, index)
+    }
+  },
+  components: {
+    LanguagesCell
+  }
 }
 </script>
 <style lang="less">

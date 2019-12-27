@@ -23,12 +23,10 @@ import ViewCodeItem from './view-code-item'
 import IssuesItem from './issues-item'
 import ScrollerY from './scroller-y'
 import LanguagesCells from './languages-cells'
-import LanguagesCell from './languages-cell'
 import LanguagesCellsTop from './languages-cells__top'
 
 const components = [
   LanguagesCells,
-  LanguagesCell,
   Icon,
   LoadingToast,
   SuccessToast,
