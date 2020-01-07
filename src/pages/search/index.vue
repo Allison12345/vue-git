@@ -1,10 +1,21 @@
 <template lang="pug">
-  page
-    .search.bg-white
-      
+  page.bg-white
+    .search
+      search-bar(@input='onInputChange')
+      search-content(:searchValue='searchValue')
 </template>
 <script>
 export default {
-  name: 'search'
+  name: 'search',
+  data() {
+    return {
+      searchValue: []
+    }
+  },
+  methods: {
+    onInputChange(i) {
+      this.searchValue.push(i)
+    }
+  }
 }
 </script>

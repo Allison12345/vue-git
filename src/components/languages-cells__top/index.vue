@@ -1,7 +1,7 @@
 <template lang="pug">
   .languages-cells__top tips: Click to delete
-    .languages-cells-content.flex
-      div.languages-cells-item.flex(v-for='(item,index) in clickItems ' :key='index' 
+    .languages-cells-content
+      .languages-cells-item.inline-block(v-for='(item,index) in clickItems ' :key='index' 
     @click='onDeleteItem(index)') {{item}}
 </template>
 <script>
@@ -20,24 +20,18 @@ export default {
 .languages-cells__top {
   top: 0;
   width: 100%;
-  height: 60px;
   background-color: #ededed;
+  padding: 4px;
   .languages-cells-content {
+    padding-right: 40px;
     .languages-cells-item {
-      border: 1px solid;
-      flex-direction: column;
-      -webkit-box-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      align-items: center;
       margin-top: 10px;
       margin-left: 6px;
-      padding: 0 6px;
+      padding: 0 10px;
       background-color: #fff;
       color: #5353f1;
-      border: 1xp solid;
-      border-color: #5353f1;
-      border-radius: 8px;
+      border: 1.3px solid #5353f1;
+      border-radius: 10px;
     }
   }
 }

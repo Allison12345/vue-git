@@ -13,8 +13,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
-</style>
+
 <style lang="less">
 .languages-cell {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

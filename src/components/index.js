@@ -24,8 +24,12 @@ import IssuesItem from './issues-item'
 import ScrollerY from './scroller-y'
 import LanguagesCells from './languages-cells'
 import LanguagesCellsTop from './languages-cells__top'
+import SearchBar from './search-bar'
+import SearchContent from './search-content'
 
 const components = [
+  SearchBar,
+  SearchContent,
   LanguagesCells,
   Icon,
   LoadingToast,

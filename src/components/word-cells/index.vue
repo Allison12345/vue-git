@@ -1,16 +1,15 @@
 <template lang="pug">
-div
-  .word-cells(v-for='(i,index) in wordItems' :key='index')
-    .word-cell.flex-c-tc(v-for='(j,index) in i' :key='index' @click.native='onWord(j,index)') {{j}}
+  .word-cells.flex-c-tc
+    .word-cell(v-for='(item, index) in wordItems' :key='index' @click='onWord(item, index)') {{item}}
 </template>
 <script>
 export default {
   name: 'word-cells',
   props: ['wordItems'],
   methods: {
-    onWord(j, index) {
-      console.log(j)
-      this.$emit('onActiveWord', j, index)
+    onWord(item, index) {
+      console.log(item)
+      this.$emit('onActiveWord', item, index)
     }
   }
 }
