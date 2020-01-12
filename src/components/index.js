@@ -1,7 +1,7 @@
 import Icon from './icon'
 import SuccessToast from './success-toast'
 import LoadingToast from './loading-toast'
-import WordToast from './word-toast'
+import Toast from './toast'
 import MaskPage from './mask-page'
 import NavBar from './nav-bar'
 import TabBar from './tab-bar'
@@ -34,7 +34,7 @@ const components = [
   Icon,
   LoadingToast,
   SuccessToast,
-  WordToast,
+  Toast,
   MaskPage,
   TabBar,
   Page,

@@ -8,7 +8,6 @@ export default {
   props: ['wordItems'],
   methods: {
     onWord(item, index) {
-      console.log(item)
       this.$emit('onActiveWord', item, index)
     }
   }

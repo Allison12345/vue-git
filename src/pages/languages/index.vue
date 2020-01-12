@@ -1,48 +1,24 @@
 <template lang="pug">
-page
+page.scroll-y(ref='page')
   languages-cells__top(:clickItems='clickItems' @deleteItem='onDeleteItem')
-  languages-cells(v-for='(i,key) in languagesItems ' :key='key' :item='i' :cellsIndex='key'
+  languages-cells(v-for='(item, key) in languagesItems ' :ref='item.word' :key='key' :item='item' :cellsIndex='key'
   @choose='onChooseItems')
   word-cells(:wordItems='wordItems' @onActiveWord='onActiveWord')
-  word-toast(:word='activeWord' v-if='isShown')
+  toast(v-if='isShown' :msg='activeWord' style={width:'32px', height:'32px'})
 </template>
+
 <script>
+const languagesItems = new Array(26).fill(0).map((_, index) => ({
+  word: String.fromCodePoint(65 + index).toLowerCase(),
+  label: ['df', 'sf', 'sdf', 'sdf', 'sdf']
+}))
+
 export default {
   name: 'languages',
   data() {
     return {
-      languagesItems: new Array(20)
-        .fill(0)
-        .map(() => ({ word: 'a', label: ['df', 'sf', 'sdf', 'sdf', 'sdf'] })),
-      wordItems: [
-        'top',
-        'a',
-        'b',
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'h',
-        'i',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        'r',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z'
-      ],
+      languagesItems,
+      wordItems: languagesItems.map(language => language.word),
       activeWord: '',
       isShown: false,
       clickItems: [],
@@ -51,9 +27,12 @@ export default {
     }
   },
   methods: {
-    onActiveWord(j) {
-      console.log(j)
-      this.activeWord = j
+    onActiveWord(word) {
+      this.activeWord = word
+      this.isShown = true
+      const languageDiv = this.$refs[word][0].$el
+      const pageDiv = this.$refs.page.$el
+      pageDiv.scrollTop = languageDiv.offsetTop
       setTimeout(() => {
         this.isShown = false
       }, 1500)
