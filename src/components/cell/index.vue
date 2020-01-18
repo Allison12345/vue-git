@@ -1,6 +1,6 @@
 <template lang="pug">
-  .cell.flex.tap-highlight
-    icon.flex-r-lc(v-if='name' :name='name')
+  .cell.flex-r-lc.tap-highlight
+    icon(v-if='name' :name='name')
     .cell-bd.flex-1  {{label}}
     .cell-ft.flex-r-lc(v-html='ft')
       slot
@@ -16,8 +16,11 @@ export default {
 <style lang="less">
 .cell {
   padding: 8px 10px;
-}
-.cell:active {
-  background-color: #ededed;
+  &:active {
+    background-color: #ededed;
+  }
+  .cell-bd {
+    padding-left: 8px;
+  }
 }
 </style>

@@ -1,12 +1,22 @@
 <template lang="pug">
   .view-code-item.bg-white
-    cell(:name='name' :label='label' :ft='ft')
+    cell(:name='cptIcon' :label='label' :ft='cptFt')
 </template>
 
 <script>
 export default {
   name: 'view-code-item',
-  props: ['name', 'label', 'ft']
+  props: ['label', 'children'],
+  computed: {
+    cptIcon() {
+      if (this.children) return 'folder-outline'
+      return 'file-outline'
+    },
+    cptFt() {
+      if (this.children) return '<i class="eva eva-chevron-right-outline" />'
+      return ''
+    }
+  }
 }
 </script>
 

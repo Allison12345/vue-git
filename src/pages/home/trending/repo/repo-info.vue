@@ -15,7 +15,9 @@
 </template>
 
 <script>
+import { CODE_FILES } from '@/store/modules/code'
 const ft = '<i class="eva eva-chevron-right-outline" />'
+const viewCodePath = '/view-code'
 export default {
   name: 'repo-info',
   data() {
@@ -51,7 +53,7 @@ export default {
           {
             label: '视图代码',
             ft,
-            path: '/view-code'
+            path: viewCodePath
           },
           {
             label: '分支',
@@ -84,6 +86,22 @@ export default {
   },
   methods: {
     onClick(path) {
+      if (path === viewCodePath) {
+        const rootPath = '.'
+        this.$store.commit(CODE_FILES, {
+          [rootPath]: new Array(15).fill(0).map((_, index) => ({
+            label: String.fromCodePoint(parseInt(index + 65, 10)),
+            children: Math.random() > 0.3
+          }))
+        })
+        this.$router.push({
+          path,
+          query: {
+            direction: rootPath
+          }
+        })
+        return
+      }
       this.$router.push(path)
     }
   }
