@@ -40,6 +40,7 @@ export default {
   .eva-search-outline {
     width: 50px;
     text-align: center;
+    padding: 5px;
   }
 }
 </style>
