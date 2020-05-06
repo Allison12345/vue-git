@@ -25,7 +25,10 @@ export default {
       })),
       isShown: false,
       mulSelIndex: [1, 1],
-      pickItems: [['Today', 'Week', 'Month'], ['All', 'HTML', 'Javascript']]
+      pickItems: [
+        ['Today', 'Week', 'Month'],
+        ['All', 'HTML', 'JavaScript']
+      ]
     }
   },
   methods: {

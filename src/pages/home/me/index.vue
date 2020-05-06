@@ -50,7 +50,10 @@ export default {
           { label: '公司', key: 'company' },
           { label: '所在地', key: 'location' }
         ],
-        [{ label: '反馈', ft }, { label: '关于', ft, path: '/about' }]
+        [
+          { label: '反馈', ft },
+          { label: '关于', ft, path: '/about' }
+        ]
       ]
     }
   },
