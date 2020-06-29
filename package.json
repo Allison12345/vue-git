@@ -12,9 +12,11 @@
     "@better-scroll/core": "^2.0.0-beta.2",
     "@better-scroll/wheel": "^2.0.0-beta.2",
     "@octokit/rest": "^16.43.1",
+    "axios": "^0.19.2",
     "core-js": "^2.6.5",
     "eva-icons": "^1.1.1",
     "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },

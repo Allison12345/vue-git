@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 const ft = '<i class="eva eva-chevron-right-outline" />'
 export default {
   name: 'me',
@@ -57,11 +58,27 @@ export default {
       ]
     }
   },
+  mounted: function() {
+    this.getMeInfo(
+      axios
+        .get('https://api.github.com/Allison12345', {
+          headers: {
+            'content-type': 'application/json',
+            Authorization: '4341fc4e9e27d38a1ef65fb8c0fc24818edd94d8'
+          }
+        })
+        .then(res => {
+          console.log(res)
+        })
+        .catch(error => console.log(error))
+    )
+  },
   methods: {
     onClick(path) {
       console.log(path)
       this.$router.push(path)
-    }
+    },
+    getMeInfo() {}
   }
 }
 </script>
